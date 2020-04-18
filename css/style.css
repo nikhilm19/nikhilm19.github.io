@@ -322,6 +322,12 @@ ul.list-ico >li a{
   margin-right: 10px;
 }
 
+.more-info > ul.list-ico{
+  display: flex;
+  line-height: 2;
+  flex-wrap: wrap;
+}
+
 /*------/ Ico Circle /------*/
 
 .ico-circle {
