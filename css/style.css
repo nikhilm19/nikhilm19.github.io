@@ -588,7 +588,8 @@ ul.list-ico >li a{
 }
 
 .navbar-b.navbar-reduce .navbar-toggler span {
-  background-color: #1b1b1b;
+  /*background-color: #1b1b1b;*/
+  
 }
 
 .navbar-b .navbar-brand {
