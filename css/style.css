@@ -16,6 +16,7 @@
   --bg-color: #e3e3e3;
   --heading-color: #292922;
   --heading-font-color: #0078ff;
+  --heading-bg-color: #fff;
   --body-bg-color: #f5f5f5;
   --icon-shadow-color: #0078ff;
   --card-bg-color: #f5f5f5;
@@ -77,23 +78,26 @@ em.theme-switch-wrapper {
 }
 
 .slider:before {
-  background-color: #fff;
+  background-color: #7a94ff;
   bottom: 0px;
-  content: "";
+  content: "🌞";
   height: 25px;
   left: 0px;
   position: absolute;
   transition: 0.4s;
   width: 25px;
   border: #0078ff 1px solid;
+  text-align: center;
 }
 
 input:checked + .slider {
-  background-color: #66bb6a;
+  background-color: white;
 }
 
 input:checked + .slider:before {
   transform: translateX(26px);
+  content: "🌙";
+  background-color: black;
 }
 
 .slider.round {

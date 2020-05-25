@@ -148,7 +148,7 @@ toggleSwitch.addEventListener("change", switchTheme, false);
     var typed_strings = $(".text-slider-items").text();
     var typed = new Typed(".text-slider", {
       strings: typed_strings.split(","),
-      typeSpeed: 80,
+      typeSpeed: 50,
       loop: true,
       backDelay: 1100,
       backSpeed: 30,
@@ -178,7 +178,7 @@ $(document).ready(function () {
   /* Every time the window is scrolled ... */
   $(window).scroll(function () {
     /* Check the location of each desired element */
-   
+
     if (!isMobile) {
       $(".hidden-container").each(function (i) {
         var bottom_of_object = $(this).position().top + $(this).height();
