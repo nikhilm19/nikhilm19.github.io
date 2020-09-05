@@ -16,15 +16,17 @@
   --bg-color: #e3e3e3;
   --heading-color: #292922;
   --heading-font-color: #0078ff;
-  --heading-bg-color: #fff;
+  --heading-bg-color: #ff8800;
   --body-bg-color: #f5f5f5;
   --icon-shadow-color: #0078ff;
   --card-bg-color: #f5f5f5;
   --home-bg-color: #fff;
   --hover-color: #0077ffa9;
-  --hover-heading-font-color: #0077ffa9;
+  --hover-heading-font-color: white;
   --overlay-color: #0078ff;
   --back-to-top-bg: #0078ff;
+  --background-blob: url("../img/blob.svg");
+  --line-mf-color: #ff8800;
 }
 
 [data-theme="dark"] {
@@ -43,6 +45,8 @@
   --hover-heading-font-color: #fff;
   --overlay-color: #000;
   --back-to-top-bg: grey;
+  --background-blob: url("../img/blob-d.svg");
+  --line-mf-color: rgb(182, 182, 182);
 }
 
 .theme-switch-wrapper {
@@ -78,15 +82,19 @@ em.theme-switch-wrapper {
 }
 
 .slider:before {
-  background-color: #7a94ff;
+  background-color: var(--heading-font-color);
   bottom: 0px;
-  content: "🌞";
+  content: " 🌞";
   height: 25px;
-  left: 0px;
+  left: 1px;
+  padding-left: 2px;
+  padding-top: 1px;
+  text-align: center;
+  vertical-align: middle;
   position: absolute;
   transition: 0.4s;
   width: 25px;
-  border: #0078ff 1px solid;
+
   text-align: center;
 }
 
@@ -97,7 +105,7 @@ input:checked + .slider {
 input:checked + .slider:before {
   transform: translateX(26px);
   content: "🌙";
-  background-color: black;
+  background-color: grey;
 }
 
 .slider.round {
@@ -233,6 +241,7 @@ a:hover {
 }
 
 .bg-image {
+  background-image: var(--background-blob);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -309,9 +318,9 @@ a:hover {
 }
 
 .line-mf {
-  width: 40px;
+  width: 60px;
   height: 5px;
-  background-color: #0078ff;
+  background-color: var(--line-mf-color);
   margin: 0 auto;
 }
 
@@ -331,7 +340,7 @@ a:hover {
   content: "";
   position: absolute;
   height: 3px;
-  background-color: var(--heading-font-color);
+  background-color: var(--line-mf-color);
   width: 100px;
   bottom: -12px;
 }
@@ -352,12 +361,19 @@ a:hover {
 }
 
 /*------/ Socials /------*/
-
+.icons {
+  color: var(--line-mf-color);
+  transition: all 500ms ease;
+}
+.icons:hover {
+  color: white;
+}
 .socials {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1.5rem 0;
+  color: var(--line-mf-color);
 }
 
 .socials ul li {
@@ -687,7 +703,7 @@ ul.list-ico > li a {
 .navbar-b.navbar-reduce .nav-link.show,
 .navbar-b.navbar-reduce .nav-link.active {
   background-color: var(--heading-bg-color);
-  color: var(--heading-font-color);
+  color: var(--hover-heading-font-color);
 }
 
 .navbar-b.navbar-reduce .navbar-brand {
@@ -1071,7 +1087,7 @@ ul.list-ico > li a {
 
 .img-fluid-own {
   width: 100%;
-  height: 250px;
+  height: 280px;
   filter: brightness(90%);
 }
 .work-img img {
@@ -1530,7 +1546,7 @@ footer .credits a {
 
   .intro .intro-title {
     margin-top: 1rem;
-    color: #7a94ff;
+    color: var(--heading-font-color);
     /*font-size: 4.5rem;*/
   }
 
