@@ -26,6 +26,7 @@
   --overlay-color: #0078ff;
   --back-to-top-bg: #0078ff;
   --background-blob: url("../img/blob.svg");
+  --section-blob: url("../img/section-blob-d.svg");
   --line-mf-color: #ff8800;
 }
 
@@ -46,6 +47,7 @@
   --overlay-color: #000;
   --back-to-top-bg: grey;
   --background-blob: url("../img/blob-d.svg");
+  --section-blob: url("../img/section-blob.svg");
   --line-mf-color: rgb(182, 182, 182);
 }
 
@@ -290,6 +292,13 @@ a:hover {
 
 .sect-mt4 {
   margin-top: 4rem;
+}
+
+.section-counter {
+  background-image: var(--section-blob);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 /*--/ Title s /--*/
@@ -829,8 +838,7 @@ ul.list-ico > li a {
 }
 
 .intro .intro-title {
-  color: #7a94ff;
-
+  color: var(--heading-font-color);
   font-weight: 600;
   /*font-size: 3rem;*/
 }
